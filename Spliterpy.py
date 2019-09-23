@@ -20,7 +20,7 @@ try:
     print("csv file must be in the same path as an exe file.")
     print('**************************************************')
     print('\n')
-    data_load = input("Please input your csv file name! : ")
+    data_load = input("Please input your csv file name. : ")
     data = pd.read_csv(""+str(data_load)+".csv")
     numdata = list(data['[Data]'].values)
     sublist = []
