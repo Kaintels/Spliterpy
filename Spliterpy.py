@@ -3,19 +3,18 @@ import os
 import traceback
 import math
 from tqdm import tqdm
-import sys
+import sys, Ui
 
 import PyQt5
 
 from PyQt5.QtGui import *
 from PyQt5.QtCore import *
 from PyQt5.QtWidgets import *
-from PyQt5 import uic
 
-class MainDialog(QDialog):
+class MainDialog(QDialog, Ui.Ui_Form):
     def __init__(self):
         QDialog.__init__(self, None)
-        uic.loadUi('main_form.ui', self)
+        self.setupUi(self)
         self.open_csv_button.clicked.connect(self.open_path)
         self.split_button.clicked.connect(self.split)
         self.information_button.clicked.connect(self.infomation)
