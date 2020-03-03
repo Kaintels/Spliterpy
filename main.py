@@ -1,12 +1,5 @@
 import pandas as pd
-import os
-import traceback
-import math
-from tqdm import tqdm
-import sys, Ui
-
-import PyQt5
-
+import Ui
 from PyQt5.QtGui import *
 from PyQt5.QtCore import *
 from PyQt5.QtWidgets import *
@@ -27,21 +20,21 @@ class MainDialog(QDialog, Ui.Ui_Form):
     def split(self):
         try:
             data_load = self.pathBrowser.toPlainText()
-            data = pd.read_csv(data_load)
-            numdata = list(data['Data'].values)
+            data = pd.read_csv(data_load, header=None, dtype='object')
+            data = data.fillna("-")
             sublist = []
             slice_data = []
-            for i in range(len(numdata)):
-                if numdata[i] == '-':
+            for i in range(len(data.index)):
+                if (data.loc[i] == '-').any():
                     slice_data.append(sublist)
                     sublist = []
                 else:
-                    sublist.append(numdata[i])
+                    sublist.append(data.loc[i])
             slice_data = [x for x in slice_data if x]
             slice_data.append(sublist)
             for i in range(len(slice_data)):
-                Total = pd.DataFrame(slice_data[i])
-                Total.to_csv("datasplit" + str(i+1) + ".csv", header=False, index=False)
+                total = pd.DataFrame(slice_data[i])
+                total.to_csv("datasplit" + str(i+1) + ".csv", header=False, index=False, encoding='utf-8-sig')
             msg = QMessageBox(self)
             msg.information(self, "Information", 'CSV file splited successfully.')
             msg.setText("Done")
@@ -62,9 +55,9 @@ class MainDialog(QDialog, Ui.Ui_Form):
         else:
             event.ignore()
 
-
-
 if __name__ == "__main__":
+    import sys
+    sys.setrecursionlimit(10000)
     app = QApplication(sys.argv)
     window = MainDialog()
     window.setWindowTitle("Spliterpy")
