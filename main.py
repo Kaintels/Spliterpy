@@ -1,8 +1,8 @@
 import pandas as pd
 import Ui
-from PyQt5.QtGui import *
-from PyQt5.QtCore import *
-from PyQt5.QtWidgets import *
+from PySide2.QtGui import *
+from PySide2.QtCore import *
+from PySide2.QtWidgets import *
 
 class MainDialog(QDialog, Ui.Ui_Form):
     def __init__(self):
@@ -14,12 +14,12 @@ class MainDialog(QDialog, Ui.Ui_Form):
 
     def open_path(self):
         file_name = QFileDialog.getOpenFileName(self, 'Open file', '.csv', "csv files (*.csv)")
-        self.pathBrowser.setText(str(file_name[0]))
-        data = file_name[0]
+        self.open_pathBrowser.setText(str(file_name[0]))
 
     def split(self):
         try:
-            data_load = self.pathBrowser.toPlainText()
+            data_load = self.open_pathBrowser.toPlainText()
+            want_data_name = self.textEdit.toPlainText()
             data = pd.read_csv(data_load, header=None, dtype='object')
             data = data.fillna("-")
             sublist = []
@@ -34,18 +34,17 @@ class MainDialog(QDialog, Ui.Ui_Form):
             slice_data.append(sublist)
             for i in range(len(slice_data)):
                 total = pd.DataFrame(slice_data[i])
-                total.to_csv("datasplit" + str(i+1) + ".csv", header=False, index=False, encoding='utf-8-sig')
+                total.to_csv(want_data_name+"_"+ str(i+1) + ".csv", header=False, index=False, encoding='utf-8-sig')
             msg = QMessageBox(self)
             msg.information(self, "Information", 'CSV file splited successfully.')
-            msg.setText("Done")
-            self.pathBrowser.clear()
+            self.open_pathBrowser.clear()
         except:
             msg = QMessageBox(self)
             msg.warning(self, "Warning", 'Please open file first.')
 
     def infomation(self):
         msg = QMessageBox(self)
-        msg.information(self, "Information", 'Spliterpy - csv data spliter based on python \n\nVersion :  0.2.0 \n\nAuthor : Kaintels (https://github.com/Kaintels)')
+        msg.information(self, "Information", 'Spliterpy - csv data spliter based on python \n\nVersion :  0.2.6 \n\nAuthor : S.Han (https://github.com/Kaintels)')
         msg.setText("Done")
 
     def closeEvent(self, event):

@@ -1,51 +1,59 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'main_form.ui'
-#
-# Created by: PyQt5 UI code generator 5.9.2
-#
-# WARNING! All changes made in this file will be lost!
+################################################################################
+## Form generated from reading UI file 'main_form.ui'
+##
+## Created by: Qt User Interface Compiler version 5.14.1
+##
+## WARNING! All changes made in this file will be lost when recompiling UI file!
+################################################################################
 
-from PyQt5 import QtCore, QtGui, QtWidgets
+from PySide2.QtCore import (QCoreApplication, QMetaObject, QObject, QPoint,
+    QRect, QSize, QUrl, Qt)
+from PySide2.QtGui import (QBrush, QColor, QConicalGradient, QCursor, QFont,
+    QFontDatabase, QIcon, QLinearGradient, QPalette, QPainter, QPixmap,
+    QRadialGradient)
+from PySide2.QtWidgets import *
+
 
 class Ui_Form(object):
     def setupUi(self, Form):
-        Form.setObjectName("Form")
-        Form.resize(460, 122)
-        self.open_csv_button = QtWidgets.QPushButton(Form)
-        self.open_csv_button.setGeometry(QtCore.QRect(20, 60, 131, 41))
-        self.open_csv_button.setObjectName("open_csv_button")
-        self.split_button = QtWidgets.QPushButton(Form)
-        self.split_button.setGeometry(QtCore.QRect(170, 60, 121, 41))
-        self.split_button.setObjectName("split_button")
-        self.path = QtWidgets.QLabel(Form)
-        self.path.setGeometry(QtCore.QRect(20, 30, 56, 12))
-        self.path.setObjectName("path")
-        self.pathBrowser = QtWidgets.QTextBrowser(Form)
-        self.pathBrowser.setGeometry(QtCore.QRect(70, 20, 381, 31))
-        self.pathBrowser.setObjectName("pathBrowser")
-        self.information_button = QtWidgets.QPushButton(Form)
-        self.information_button.setGeometry(QtCore.QRect(360, 60, 91, 41))
-        self.information_button.setObjectName("information_button")
+        if Form.objectName():
+            Form.setObjectName(u"Form")
+        Form.resize(457, 122)
+        self.open_csv_button = QPushButton(Form)
+        self.open_csv_button.setObjectName(u"open_csv_button")
+        self.open_csv_button.setGeometry(QRect(20, 60, 131, 41))
+        self.split_button = QPushButton(Form)
+        self.split_button.setObjectName(u"split_button")
+        self.split_button.setGeometry(QRect(190, 60, 121, 41))
+        self.openpath = QLabel(Form)
+        self.openpath.setObjectName(u"openpath")
+        self.openpath.setGeometry(QRect(20, 30, 56, 12))
+        self.open_pathBrowser = QTextBrowser(Form)
+        self.open_pathBrowser.setObjectName(u"open_pathBrowser")
+        self.open_pathBrowser.setGeometry(QRect(70, 20, 191, 31))
+        self.information_button = QPushButton(Form)
+        self.information_button.setObjectName(u"information_button")
+        self.information_button.setGeometry(QRect(340, 60, 91, 41))
+        self.savename = QLabel(Form)
+        self.savename.setObjectName(u"savename")
+        self.savename.setGeometry(QRect(270, 30, 56, 12))
+        self.textEdit = QTextEdit(Form)
+        self.textEdit.setObjectName(u"textEdit")
+        self.textEdit.setGeometry(QRect(330, 20, 104, 31))
 
         self.retranslateUi(Form)
-        QtCore.QMetaObject.connectSlotsByName(Form)
+
+        QMetaObject.connectSlotsByName(Form)
+    # setupUi
 
     def retranslateUi(self, Form):
-        _translate = QtCore.QCoreApplication.translate
-        Form.setWindowTitle(_translate("Form", "Form"))
-        self.open_csv_button.setText(_translate("Form", "Open CSV"))
-        self.split_button.setText(_translate("Form", "Split!"))
-        self.path.setText(_translate("Form", "Path..."))
-        self.information_button.setText(_translate("Form", "Info..."))
-
-
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    Form = QtWidgets.QWidget()
-    ui = Ui_Form()
-    ui.setupUi(Form)
-    Form.show()
-    sys.exit(app.exec_())
+        Form.setWindowTitle(QCoreApplication.translate("Form", u"Form", None))
+        self.open_csv_button.setText(QCoreApplication.translate("Form", u"Open CSV", None))
+        self.split_button.setText(QCoreApplication.translate("Form", u"Split !", None))
+        self.openpath.setText(QCoreApplication.translate("Form", u"Path...", None))
+        self.information_button.setText(QCoreApplication.translate("Form", u"Info...", None))
+        self.savename.setText(QCoreApplication.translate("Form", u"Name", None))
+    # retranslateUi
 
