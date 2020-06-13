@@ -13,7 +13,7 @@
 
 ## install
 
-Spliterpy can download [here](https://tmshome.itch.io/spliterpy). Also, you can take a look information in [releases](https://github.com/Kaintels/Spliterpy/releases).
+Spliterpy can download [here](https://kaintels.itch.io/spliterpy). Also, you can take a look information in [releases](https://github.com/Kaintels/Spliterpy/releases).
 
 ## Example
 
