@@ -28,13 +28,33 @@ Spliterpy can download [here](https://kaintels.itch.io/spliterpy). Also, you can
 - [ ] Lighter file volume and improved speed
 - [ ] Data plotting
 
+
+## Citation
+If you used this package in your research and is interested in citing it here's how you do it: (IEEE style)
+
+```
+Seungwoo Han, “Spliterpy - CSV data spliter based on python”. Zenodo, 10-Nov-2019.
+```
+
 ## How to Contribution
 
 Pull requests are encouraged and always welcome!
 
 ## Contributors
 
-[![](https://sourcerer.io/fame/Kaintels/Kaintels/Spliterpy/images/0)](https://sourcerer.io/fame/Kaintels/Kaintels/Spliterpy/links/0)[![](https://sourcerer.io/fame/Kaintels/Kaintels/Spliterpy/images/1)](https://sourcerer.io/fame/Kaintels/Kaintels/Spliterpy/links/1)[![](https://sourcerer.io/fame/Kaintels/Kaintels/Spliterpy/images/2)](https://sourcerer.io/fame/Kaintels/Kaintels/Spliterpy/links/2)[![](https://sourcerer.io/fame/Kaintels/Kaintels/Spliterpy/images/3)](https://sourcerer.io/fame/Kaintels/Kaintels/Spliterpy/links/3)[![](https://sourcerer.io/fame/Kaintels/Kaintels/Spliterpy/images/4)](https://sourcerer.io/fame/Kaintels/Kaintels/Spliterpy/links/4)[![](https://sourcerer.io/fame/Kaintels/Kaintels/Spliterpy/images/5)](https://sourcerer.io/fame/Kaintels/Kaintels/Spliterpy/links/5)[![](https://sourcerer.io/fame/Kaintels/Kaintels/Spliterpy/images/6)](https://sourcerer.io/fame/Kaintels/Kaintels/Spliterpy/links/6)[![](https://sourcerer.io/fame/Kaintels/Kaintels/Spliterpy/images/7)](https://sourcerer.io/fame/Kaintels/Kaintels/Spliterpy/links/7)
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/Kaintels"><img src="https://avatars.githubusercontent.com/u/38157496?s=460&u=701d6896714d3551c20e1f46c15079f8e6630784&v=4" width="100px;" alt=""/><br /><sub><b>Seungwoo Han</b></sub></a><br /><a href="https://github.com/Kaintels" title="Code">🏠</a></td>
+  </tr>
+</table>
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
 
 ## License
 
